@@ -13,5 +13,6 @@ I will write more here in a few days.
  - [ ] Load servers by votes from database
  - [ ] API route to get the voted server from the user
  - [ ] Database
+ - [ ] Optimize templates
  - [X] templates (mostly done i think)
  - [X] Login
