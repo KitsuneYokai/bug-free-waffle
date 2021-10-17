@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>bug-free-waffle</title>
+    <link rel="stylesheet" href="static/css/000008bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
+    <link rel="stylesheet" href="static/css/000010hintergrund_index.css">
+    <link rel="stylesheet" href="static/css/000011styles.css">
+</head>
+
+<body style="background: var(--bs-gray-900);">
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" style="background: rgba(52,58,64,0.9);border-bottom-right-radius: 30px;border-bottom-left-radius: 30px;">
+        <div class="container-fluid"><a class="navbar-brand text-uppercase" href="/" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-left: 1%;">bug-free-waffle</a><a class="btn btn-primary" role="button" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;" href="/login">Login</a></div>
+    </nav>
+    <div class="bg"><div class="3eck">
+            <ul class="dreieck">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+</div></div>
+    <section>
+        <header>
+            <div class="container" style="margin-top: 20%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">Welcome to BUG-FREE-WAFFLE</h1>
+                    </div>
+                    <div class="col" style="margin-top: -1%;margin-left: 3%;">
+                        <p style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">osu private servers, just one click away</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section style="margin-top: 23%;">
+        <div class="container" style="margin-bottom: 15%;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="background: rgb(52,58,64);height: auto;border-radius: 30px;">
+                        <section style="padding: 1%;">
+                            <h2 class="text-center" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);">Serverlist</h2>
+                            <hr style="height: 2px;color: var(--bs-gray-400);">          <!-- div to contain the content -->
+          <div id="scroller" class="mb-3">
+
+            <!-- template schema, hidden from the dom -->
+            <template id="post_template">
+
+              <!-- template content -->
+              <div class="card mb-3 animated fadeIn shadow-sm" style="background: rgb(52,58,64);height: auto;border-radius: 30px;">
+                <div class="card-body">
+                  <h4 class="card-title" id="title"></h4>
+                  <span class="text-muted" id="content"></span>
+                </div>
+              </div>
+
+            </template>
+
+          </div>
+
+          <!-- element to trigger the IntersectionObserver -->
+          <div class="d-flex justify-content-center mb-3" id="sentinel">
+            <div class="spinner-border" role="status" style="color: var(--bs-gray-400); "></div>
+          </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="margin-top: 28%;">
+        <div style="height: 30px;background: rgba(52,58,64,0.9);border-top-left-radius: 30px;border-top-right-radius: 30px;"></div>
+    </footer>
+    <script src="static/js/000009bootstrap.min.js"></script>
+    <script src="static/js/000013serverloading.js"></script>
+</body>
+
+</html>

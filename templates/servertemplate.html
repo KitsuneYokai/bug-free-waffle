@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>bug-free-waffle</title>
+    <link rel="stylesheet" href="static/css/000008bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
+    <link rel="stylesheet" href="static/css/000010hintergrund_index.css">
+    <link rel="stylesheet" href="static/css/000011styles.css">
+</head>
+
+<body style="background: var(--bs-gray-900);">
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" style="background: rgba(52,58,64,0.9);border-bottom-right-radius: 30px;border-bottom-left-radius: 30px;">
+        <div class="container-fluid"><a class="navbar-brand text-uppercase" href="/" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-left: 1%;">bug-free-waffle</a><a class="btn btn-danger" role="button" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;" href="/logout">Logout</a></div>
+    </nav>
+    <div class="bg"><div class="3eck">
+            <ul class="dreieck">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+</div></div>
+    <section style="margin-top: 10%;height: auto;">
+        <div class="container" style="border-radius: 30px;padding: 1%;">
+            <h1 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">Welcome to {{servername}}'s serverpage</h1>
+            <div style="background: rgba(52,58,64,0.9);border-radius: 30px;padding: 2%;">
+                <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                        <div style="height: auto;">
+                            <div class="col-xl-12 offset-xl-0">
+                                <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">&nbsp;{{servername}}'s&nbsp;</h3><img src="static/img/000012Lz9H4ktQ.jpg" style="margin-bottom: 3%;min-height: 256px;max-height: 325px;border-style: none;border-top-left-radius: 60px;border-top-right-radius: 60px;border-bottom-right-radius: 120px;border-bottom-left-radius: 60px;">
+                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP';font-weight: bold;">Current Votes:&nbsp;<span id="votes_num">69</span></p>
+                            </div>
+                            <div class="col" style="margin-bottom: 3%;"><a class="btn btn-info" role="button" id="server_website" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);" href="{{server_url}}"><strong>{{servername}}</strong><br></a></div>
+                            <div class="col"><a class="btn btn-secondary" role="button" id="vote" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);" href="/vote"><strong>Vote</strong><br></a></div>
+                        </div>
+                        <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-top: 3%;"></p>
+                        <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;"></p>
+                        <hr style="color: var(--bs-gray-400);height: 3px;background: rgba(33,37,41,0.8);">
+                        <div><iframe src="https://discord.com/widget?id=470682580174503936&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+                    </div>
+                    <div class="col-md-6 col-xl-8">
+                        <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 3%;">Server description</h3>
+                        <div style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP', sans-serif;">
+                            <p id="server_desc" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding-top: 2%;padding-left: 2%;padding-bottom: 2%;padding-right: 1%;margin-bottom: 10%;">Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.Lorem impresum donor sit amet.<br></p>
+                        </div>
+                        <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">Here are some reviews of&nbsp;<strong>{{servername}} players</strong><br><br></h3>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div style="background: rgba(33,37,41,0.74);border-radius: 30px;">
+                                            <div class="col">
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">Good server works all the time, obama 4 president, 2+2=4, 2pac2mad</p>
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">-Someone Famous</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div style="background: rgba(33,37,41,0.74);border-radius: 30px;">
+                                            <div class="col">
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">Good server works all the time, obama 4 president, 2+2=4, 2pac2mad</p>
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">-Someone Famous 2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div style="background: rgba(33,37,41,0.74);border-radius: 30px;">
+                                            <div class="col">
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">Good server works all the time, obama 4 president, 2+2=4, 2pac2mad</p>
+                                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding: 8%;">-Someone Famous 3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="margin-top: 20%;">
+        <div style="height: 30px;background: rgba(52,58,64,0.9);border-top-left-radius: 30px;border-top-right-radius: 30px;"></div>
+    </footer>
+    <script src="static/js/000009bootstrap.min.js"></script>
+    <script src="static/js/000013serverloading.js"></script>
+</body>
+
+</html>
