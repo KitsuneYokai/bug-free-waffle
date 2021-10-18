@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>bug-free-waffle</title>
-    <link rel="stylesheet" href="static/css/000008bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
     <link rel="stylesheet" href="static/css/000010hintergrund_index.css">
     <link rel="stylesheet" href="static/css/000011styles.css">
@@ -47,31 +47,19 @@
         <div class="container" style="margin-bottom: 15%;">
             <div class="row">
                 <div class="col-md-12">
-                    <div style="background: rgb(52,58,64);height: auto;border-radius: 30px;">
+                    <div style="background: rgb(52,58,64);height: auto;border-radius: 30px;padding: 1%;">
                         <section style="padding: 1%;">
-                            <h2 class="text-center" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);">Serverlist</h2>
-                            <hr style="height: 2px;color: var(--bs-gray-400);">          <!-- div to contain the content -->
-          <div id="scroller" class="mb-3">
-
-            <!-- template schema, hidden from the dom -->
-            <template id="post_template">
-
-              <!-- template content -->
-              <div class="card mb-3 animated fadeIn shadow-sm" style="background: rgb(52,58,64);height: auto;border-radius: 30px;">
-                <div class="card-body">
-                  <h4 class="card-title" id="title"></h4>
-                  <span class="text-muted" id="content"></span>
-                </div>
-              </div>
-
-            </template>
-
-          </div>
-
-          <!-- element to trigger the IntersectionObserver -->
-          <div class="d-flex justify-content-center mb-3" id="sentinel">
-            <div class="spinner-border" role="status" style="color: var(--bs-gray-400); "></div>
-          </div>
+                            <h2 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);">Serverlist</h2>
+                            {% for servername in servername %}
+                                <a href="https://google.de">
+                                    <div class="card mb-3 animated fadeIn shadow-sm"style="background: rgb(52,58,64);height: auto;border-radius: 30px;padding: 2%;">
+                                      <div class="card-body">
+                                        <h4 class="card-title" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP'" id="title">{{servername.servername}}</h4>
+                                        <span class="text-muted" id="content">{{servername.server_text}}</span>
+                                      </div>
+                                    </div>   
+                                  </a>
+                            {% endfor %}
                         </section>
                     </div>
                 </div>
@@ -81,8 +69,7 @@
     <footer style="margin-top: 28%;">
         <div style="height: 30px;background: rgba(52,58,64,0.9);border-top-left-radius: 30px;border-top-right-radius: 30px;"></div>
     </footer>
-    <script src="static/js/000009bootstrap.min.js"></script>
-    <script src="static/js/000013serverloading.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

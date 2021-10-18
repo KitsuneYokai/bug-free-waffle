@@ -13,5 +13,4 @@ def index():
 @login.route("/callback/")
 def callback():
     discord.callback()
-    user = discord.fetch_user()
     return redirect(url_for("dash.index"))
