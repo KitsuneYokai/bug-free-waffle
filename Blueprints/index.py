@@ -1,6 +1,5 @@
-from flask import Blueprint, render_template, make_response, request, jsonify
-import random
-import time
+from flask import Blueprint, render_template
+
 
 index = Blueprint('index', __name__)
 from db import mysql
@@ -14,10 +13,11 @@ def home():
     conn = mysql.connect()
     cur = conn.cursor()
 
-    # get the servername,server_text & serverid from the database
+    # get the servername,server_text from the database
     cur.execute('SELECT servername, server_text FROM servers ORDER BY votes DESC')
     servername = list(cur.fetchall())
     cur.close()
+    conn.commit()
 
-    # TODO 
+    # TODO add the right redirect 
     return render_template('index.html', servername=servername)

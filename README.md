@@ -6,7 +6,7 @@ I will write more here in a few days.
 
 ## TODO's
 
-- [ ] Register server
+- [x] Register server
 
 - [ ] Edit server
 
@@ -18,11 +18,15 @@ I will write more here in a few days.
 
 - [ ] API route to get the voted server from the user
 
-- [x] Database
+- [x] Database(MySQL)
 
 - [ ] Optimize templates
 
-- [X] templates (mostly done i think)
+- [X] Templates (mostly done i think)
+
+- [ ] Add msg to forms, so the user knows when the server is registered/voted ...
+
+- [ ] Add Dashboard/vote/review button to navbar
 
 - [ ] Add favicon & votes from the server to the servercards
 

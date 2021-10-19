@@ -22,7 +22,7 @@ def index():
 
 # Register a server to the site   
 @dash.route('/register_server', methods=["GET","POST"])
-# @requires_authorization
+@requires_authorization
 def reg_server():    
     msg=""
     if request.method == 'POST' and 'servername_input' in request.form and 'serverurl_input' and 'discordid_input' and 'servertext_input' in request.form:
@@ -46,13 +46,15 @@ def reg_server():
         userid = user.id
 
         if reg_by:
-            msg="You already have an server registered"
+             msg="You already have an server registered"
 
+        #TODO add hcaptcha to the form
         cur = conn.cursor()
         # write data to database
-        # TODO re read how its done
-        cur.execute('INSERT INTO servers (servername, serverurl, discordserverid, server_text, registered_by) VALUES (%s,%s,%s,%s,%s)' (servername_input,serverurl_input,discordid_input,servertext_input,userid))
+        cur.execute("INSERT INTO servers(servername, serverurl, discordserverid, server_text, registered_by) VALUES (%s,%s,%s,%s,%s)", (servername_input, serverurl_input, discordid_input, servertext_input, userid))
         cur.close()
+        conn.commit()
+
         msg="Your server has been successfully registered"
 
 
