@@ -8,7 +8,7 @@ I will write more here in a few days.
 
 - [x] Register server
 
-- [X] Edit server (almost done, Update sql query left)
+- [X] Edit server
 
 - [ ] Write review
 
@@ -29,6 +29,8 @@ I will write more here in a few days.
 - [ ] Add Dashboard/vote/review button to navbar
 
 - [ ] Add favicon & votes from the server to the servercards
+
+- [ ] Add hCaptcha
 
 - [X] Login
 

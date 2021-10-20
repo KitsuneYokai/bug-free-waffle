@@ -63,12 +63,14 @@ def reg_server():
 @dash.route('/edit_server', methods=['POST', 'GET'])
 @requires_authorization
 def edit_server():
+    
     msg=""
 
     user = discord.fetch_user()
 
     # Make MySQL connection
     conn = mysql.connect()
+    conn.autocommit = True
     cur = conn.cursor()
     
     # get the data from the database to edit
@@ -82,9 +84,14 @@ def edit_server():
         serverurl_input =  request.form['serverurl_input']
         discordid_input =  request.form['discordid_input']
         servertext_input =  request.form['servertext_input']
+        
+        cur = conn.cursor()
+        # get the data from the database to edit
+        cur.execute("UPDATE servers SET servername=%s, serverurl=%s, discordserverid=%s, server_text=%s WHERE registered_by=%s " %(servername_input, serverurl_input, discordid_input, servertext_input, user.id))
+        conn.commit()
 
-        #TODO write update query
         msg="Your server information has been updated"
+        return render_template('dash_serveredit.html', serverdata=serverdata, msg=msg)
 
     return render_template('dash_serveredit.html', serverdata=serverdata, msg=msg)
 
