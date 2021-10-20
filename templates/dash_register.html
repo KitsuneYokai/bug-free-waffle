@@ -7,8 +7,8 @@
     <title>bug-free-waffle</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
-    <link rel="stylesheet" href="static/css/000010hintergrund_index.css">
-    <link rel="stylesheet" href="static/css/000011styles.css">
+    <link rel="stylesheet" href="static/css/000009hintergrund_index.css">
+    <link rel="stylesheet" href="static/css/000010styles.css">
 </head>
 
 <body style="background: var(--bs-gray-900);">
@@ -36,11 +36,9 @@
             <div class="col">
                 <div style="background: rgba(52,58,64,0.9);border-radius: 30px;padding: 20px;">
                     <form method="POST" action="/register_server" autocomplete="off">
-                        <h2 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 2%;">Please fill out the form</h2><input class="form-control" type="text" id="servername_input" name="servername_input" placeholder="Servername" style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP';border-style: none;margin-bottom: 3%;color: var(--bs-gray-400);"><input class="form-control" type="text" id="serverurl_input" name="serverurl_input" placeholder="Serverurl (e.g https://kitosu.cf)" style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP';border-style: none;margin-bottom: 3%;color: var(--bs-gray-400);"><input class="form-control" type="number" id="discordid_input" placeholder="Discord server id" style="font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;border-style: none;background: rgba(33,37,41,0.74);margin-bottom: 3%;color: var(--bs-gray-400);" max="999999999999999999999" min="0" name="discordid_input"><textarea class="form-control" id="servertext_input" placeholder="Write something about the server. Why should user join your server? what makes it unique/different from others?" style="font-family: 'Noto Sans JP', sans-serif;background: rgba(33,37,41,0.74);border-radius: 30px;border-style: none;height: 149px;color: var(--bs-gray-400);" name="servertext_input"></textarea><button class="btn btn-success" id="btn_register_server" type="submit" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;margin-top: 3%;">Register</button>
+                        <h2 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 2%;">Please fill out the form</h2><input class="form-control" type="text" id="servername_input" name="servername_input" placeholder="Servername" style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP';border-style: none;margin-bottom: 3%;color: var(--bs-gray-400);"><input class="form-control" type="text" id="serverurl_input" name="serverurl_input" placeholder="Serverurl (e.g https://kitosu.cf)" style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP';border-style: none;margin-bottom: 3%;color: var(--bs-gray-400);"><input class="form-control" type="number" id="discordid_input" placeholder="Discord server id" style="font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;border-style: none;background: rgba(33,37,41,0.74);margin-bottom: 3%;color: var(--bs-gray-400);" max="999999999999999999999" min="0" name="discordid_input"><textarea class="form-control" id="servertext_input" placeholder="Write something about the server. Why should user join your server? what makes it unique/different from others?" style="font-family: 'Noto Sans JP', sans-serif;background: rgba(33,37,41,0.74);border-radius: 30px;border-style: none;height: 149px;color: var(--bs-gray-400);" name="servertext_input"></textarea>
+                        <p style="margin-top: 2%;color: var(--bs-gray-400);font-weight: bold;">&nbsp;{{msg}}</p><button class="btn btn-success" id="btn_register_server" type="submit" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);font-weight: bold;">Register</button>
                     </form>
-                    <p>
-                        {{msg}}
-                    </p>
                 </div>
             </div>
         </div>

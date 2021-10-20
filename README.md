@@ -8,7 +8,7 @@ I will write more here in a few days.
 
 - [x] Register server
 
-- [ ] Edit server
+- [X] Edit server (almost done, Update sql query left)
 
 - [ ] Write review
 
@@ -24,7 +24,7 @@ I will write more here in a few days.
 
 - [X] Templates (mostly done i think)
 
-- [ ] Add msg to forms, so the user knows when the server is registered/voted ...
+- [X] Add msg to forms, so the user knows when the server is registered/voted ...
 
 - [ ] Add Dashboard/vote/review button to navbar
 
