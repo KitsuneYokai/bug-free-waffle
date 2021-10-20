@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
     <link rel="stylesheet" href="static/css/000009hintergrund_index.css">
-    <link rel="stylesheet" href="static/css/000010styles.css">
+    <link rel="stylesheet" href="static/css/000010scrollbar.css">
 </head>
 
 <body style="background: var(--bs-gray-900);">
@@ -37,7 +37,7 @@
                         <h1 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">Welcome to BUG-FREE-WAFFLE</h1>
                     </div>
                     <div class="col" style="margin-top: -1%;margin-left: 3%;">
-                        <p style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">osu private servers, just one click away</p>
+                        <p style="color: var(--bs-gray-600);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">osu private servers, just one click away</p>
                     </div>
                 </div>
             </div>
@@ -47,19 +47,22 @@
         <div class="container" style="margin-bottom: 15%;">
             <div class="row">
                 <div class="col-md-12">
-                    <div style="background: rgb(52,58,64);height: auto;border-radius: 30px;padding: 1%;">
+                    <div style="background: rgba(52,58,64,0.9);height: auto;border-radius: 30px;padding: 1%;">
                         <section style="padding: 1%;">
-                            <h2 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);">Serverlist</h2>                         
-                            {% for servername in servername %}
-                                <a href="https://google.de">
-                                    <div class="card mb-3 animated fadeIn shadow-sm"style="background: rgb(52,58,64);height: auto;border-radius: 30px;padding: 2%;">
-                                      <div class="card-body">
-                                        <h4 class="card-title" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP'" id="title">{{servername.servername}}</h4>
-                                        <span class="text-muted" id="content">{{servername.server_text}}</span>
-                                      </div>
-                                    </div>   
-                                  </a>
-                            {% endfor %}
+                            <h2 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-bottom: 2%;">Serverlist</h2>                            {% for servername in servername %}<a href="#" style="margin-bottom: 2%;margin-top: 2%;">
+                                <div style="border-radius: 30px;padding: 2%;background: rgba(33,37,41,0.8);color: var(--bs-indigo);margin-bottom: 2%;">
+                                    <div class="row">
+                                        <div class="col offset-xl-0">
+                                            <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">{{servername.servername}}</h3>
+                                            <p id="server_text_index" class="server_text_index" style="color: var(--bs-gray-600);  overflow: hidden;   white-space: nowrap;   text-overflow: ellipsis;   max-width: 200px;">{{servername.server_text}}</p>
+                                        </div>
+                                        <div class="col-xl-4 offset-xl-3">
+                                            <h2 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;text-align: center;"><strong>{{servername.votes}}</strong><br></h2>
+                                            <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;text-align: center;">Votes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>                            {% endfor %}
                         </section>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ def home():
     cur = conn.cursor()
 
     # get the servername,server_text from the database
-    cur.execute('SELECT servername, server_text FROM servers ORDER BY votes DESC')
+    cur.execute('SELECT servername, server_text, votes FROM servers ORDER BY votes DESC')
     servername = list(cur.fetchall())
     cur.close()
     conn.commit()

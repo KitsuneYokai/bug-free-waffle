@@ -1,5 +1,3 @@
-from sqlite3 import Row
-from xml.dom.domreg import registered
 from flask import render_template, request, redirect, url_for, Blueprint
 from flask_discord import Unauthorized, requires_authorization
 
@@ -42,7 +40,6 @@ def reg_server():
         cur.execute("SELECT registered_by FROM servers WHERE registered_by = (%s)", (user.id))
         reg_by = cur.fetchall()
         cur.close()
-        conn.commit()
 
         if reg_by:
             msg="You already have a server registered"
@@ -63,14 +60,12 @@ def reg_server():
 @dash.route('/edit_server', methods=['POST', 'GET'])
 @requires_authorization
 def edit_server():
-    
     msg=""
 
     user = discord.fetch_user()
 
     # Make MySQL connection
     conn = mysql.connect()
-    conn.autocommit = True
     cur = conn.cursor()
     
     # get the data from the database to edit
@@ -86,7 +81,7 @@ def edit_server():
         servertext_input =  request.form['servertext_input']
         
         cur = conn.cursor()
-        # get the data from the database to edit
+        # Edit the data
         cur.execute("UPDATE servers SET servername=%s, serverurl=%s, discordserverid=%s, server_text=%s WHERE registered_by=%s " %(servername_input, serverurl_input, discordid_input, servertext_input, user.id))
         conn.commit()
 
@@ -96,12 +91,29 @@ def edit_server():
     return render_template('dash_serveredit.html', serverdata=serverdata, msg=msg)
 
 
-@dash.route('/vote_server')
+@dash.route('/vote_server', methods=['POST', 'GET'])
 @requires_authorization
 def vote():
     msg=""
+    
+    conn = mysql.connect()
+    cur = conn.cursor()
+    
+    # Get servernames and to insert into the form
+    cur.execute('SELECT servername FROM servers')
+    serverdata = cur.fetchall()
+    cur.close()
+
+    if request.method == 'POST' and 'chose_server' in request.form:
+        cur = conn.cursor()
+        # Get servernames and to insert into the form
+        cur.execute('SELECT servername FROM servers')
+        serverdata = cur.fetchall()
+        cur.close()
+
+    
         
-    return render_template('dash_vote.html')
+    return render_template('dash_vote.html',serverdata=serverdata)
 
 
 @dash.route('/review',methods=['POST', 'GET'])
