@@ -12,7 +12,7 @@ I will write more here in a few days.
 
 - [ ] Write review
 
-- [ ] Vote
+- [X] Vote (have to write vote.py to deleat votes after x h from the database)
 
 - [x] Load servers by votes from database & display on index
 
@@ -28,7 +28,7 @@ I will write more here in a few days.
 
 - [ ] Add Dashboard/vote/review button to navbar
 
-- [ ] Add favicon & votes from the server to the servercards
+- [X] Add favicon & votes from the server to the servercards
 
 - [ ] Add hCaptcha
 
@@ -38,6 +38,7 @@ I will write more here in a few days.
  - Add the serverteam member's to the serverpage
  - Add social media buttons
  - add discord bot to vote through the discord server
+ - Maybe add a userpage?
 
 Have an idea or a name for the project?
 Feel free to dm me on dc KitsuneYokai#7746

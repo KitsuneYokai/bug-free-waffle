@@ -1,6 +1,9 @@
 from flask import render_template, request, redirect, url_for, Blueprint
 from flask_discord import Unauthorized, requires_authorization
 
+#import datetime for vote logging
+from datetime import datetime
+
 dash = Blueprint('dash', __name__)
 
 from waffle import discord
@@ -105,15 +108,38 @@ def vote():
     cur.close()
 
     if request.method == 'POST' and 'chose_server' in request.form:
+        
+        chose_server =  request.form['chose_server']
+
+        user = discord.fetch_user()
+
         cur = conn.cursor()
-        # Get servernames and to insert into the form
-        cur.execute('SELECT servername FROM servers')
-        serverdata = cur.fetchall()
+        # look if the user is in the vote database
+        cur.execute("SELECT voted, voted_time FROM user_votes WHERE dcuserid = (%s)", (user.id))
+        voted = cur.fetchall()
         cur.close()
 
-    
+        if voted:
+            msg="You already voted in the past 12h"
         
-    return render_template('dash_vote.html',serverdata=serverdata)
+        else:
+            now = datetime.now()
+            timestamp = datetime.timestamp(now)
+
+            cur = conn.cursor()
+            # if the user is not deleted by votes.py insert data / vote
+            cur.execute('UPDATE servers SET votes = votes + 1 WHERE servername = %s',(chose_server))
+            cur.close()
+            conn.commit()
+
+            cur = conn.cursor()
+            cur.execute("INSERT INTO user_votes(dcuserid, voted, voted_time) VALUES (%s,%s,%s)", (user.id, chose_server, timestamp))
+            cur.close()
+            conn.commit()
+
+            msg="Your successfully voted for your favorite server"
+
+    return render_template('dash_vote.html', serverdata=serverdata, msg=msg )
 
 
 @dash.route('/review',methods=['POST', 'GET'])
