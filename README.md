@@ -6,33 +6,33 @@ I will write more here in a few days.
 
 ## TODO's
 
-- [x] Register server
+- [✔️] Register server
 
-- [X] Edit server
+- [✔️] Edit server
 
-- [ ] Write review
+- [  ] Write review
 
-- [X] Vote (have to write vote.py to deleat votes after x h from the database)
+- [✔️] Vote (users can vote every 12h)
 
-- [x] Load servers by votes from database & display on index
+- [✔️] Load servers by votes from database & display on index
 
-- [ ] API route to get the voted server from the user
+- [  ] API route to get the voted server from the user
 
-- [x] Database(MySQL)
+- [✔️] Database(MySQL)
 
-- [ ] Optimize templates
+- [  ] Optimize templates
 
-- [X] Templates (mostly done i think)
+- [✔️] Templates (mostly done i think)
 
-- [X] Add msg to forms, so the user knows when the server is registered/voted ...
+- [✔️] Add msg to forms, so the user knows when the server is registered/voted ...
 
-- [ ] Add Dashboard/vote/review button to navbar
+- [  ] Add Dashboard/vote/review button to navbar
 
-- [X] Add favicon & votes from the server to the servercards
+- [✔️] Add favicon & votes from the server to the servercards
 
-- [ ] Add hCaptcha
+- [  ] Add hCaptcha
 
-- [X] Login
+- [✔️] Login
 
 ## Ideas
  - Add the serverteam member's to the serverpage

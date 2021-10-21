@@ -1,9 +1,6 @@
 from flask import render_template, request, redirect, url_for, Blueprint
 from flask_discord import Unauthorized, requires_authorization
 
-#import datetime for vote logging
-from datetime import datetime
-
 dash = Blueprint('dash', __name__)
 
 from waffle import discord
@@ -113,6 +110,12 @@ def vote():
 
         user = discord.fetch_user()
 
+        # Delete voter database entry if the vote is older than 12 h
+        cur = conn.cursor()
+        cur.execute("DELETE FROM `user_votes` WHERE `voted_time` < ADDDATE(NOW(), INTERVAL -12 HOUR)")
+        cur.close()
+        conn.commit()
+
         cur = conn.cursor()
         # look if the user is in the vote database
         cur.execute("SELECT voted, voted_time FROM user_votes WHERE dcuserid = (%s)", (user.id))
@@ -123,9 +126,6 @@ def vote():
             msg="You already voted in the past 12h"
         
         else:
-            now = datetime.now()
-            timestamp = datetime.timestamp(now)
-
             cur = conn.cursor()
             # if the user is not deleted by votes.py insert data / vote
             cur.execute('UPDATE servers SET votes = votes + 1 WHERE servername = %s',(chose_server))
@@ -133,7 +133,7 @@ def vote():
             conn.commit()
 
             cur = conn.cursor()
-            cur.execute("INSERT INTO user_votes(dcuserid, voted, voted_time) VALUES (%s,%s,%s)", (user.id, chose_server, timestamp))
+            cur.execute("INSERT INTO user_votes(dcuserid, voted, voted_time) VALUES (%s,%s, CURRENT_TIMESTAMP)", (user.id, chose_server))
             cur.close()
             conn.commit()
 
