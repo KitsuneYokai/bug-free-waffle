@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 from flask_discord import DiscordOAuth2Session
+
 from decouple import config
+
 
 import os
 
@@ -14,7 +16,6 @@ app.config["DISCORD_REDIRECT_URI"] = config('DISCORD_REDIRECT_URI')
 app.config["DISCORD_BOT_TOKEN"] = config('DISCORD_BOT_TOKEN')
 
 discord = DiscordOAuth2Session(app)
-
 
 """importing Blueprints"""
 # Dashboard Blueprint

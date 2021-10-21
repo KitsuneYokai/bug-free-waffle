@@ -6,31 +6,37 @@ I will write more here in a few days.
 
 ## TODO's
 
-- [✔️] Register server
+- [  ] Write review
+  
+- [  ] Add Dashboard/vote/review button to navbar
+
+- [  ] Optimize templates
+
+- [  ] API route to get the voted server from the user
+
+- [  ] Add reviews to the serverpage (with discord name/icon of the user)
 
 - [✔️] Edit server
 
-- [  ] Write review
+- [✔️] Register server
+
+- [✔️] Serverpage (kinda done, it definitely need a final touch)
+
+- [✔️] Index redirect to the right server page
 
 - [✔️] Vote (users can vote every 12h)
 
 - [✔️] Load servers by votes from database & display on index
 
-- [  ] API route to get the voted server from the user
-
 - [✔️] Database(MySQL)
-
-- [  ] Optimize templates
 
 - [✔️] Templates (mostly done i think)
 
 - [✔️] Add msg to forms, so the user knows when the server is registered/voted ...
 
-- [  ] Add Dashboard/vote/review button to navbar
-
 - [✔️] Add favicon & votes from the server to the servercards
 
-- [  ] Add hCaptcha
+- [✔️] Add hCaptcha
 
 - [✔️] Login
 
