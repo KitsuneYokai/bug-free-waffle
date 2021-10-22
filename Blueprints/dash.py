@@ -24,7 +24,7 @@ def index():
     return render_template('dashboard.html')
 
 
-# Register a server to the site   
+# Register your server to the site   
 @dash.route('/register_server', methods=["GET","POST"])
 async def reg_server():
     msg=""
@@ -66,7 +66,7 @@ async def reg_server():
 
     return render_template('dash_register.html', msg=msg, hsitekey=hsitekey)
 
-# TODO remove changing names(servername only) + add sql to check if the name already exists in the db
+# Edit your server
 @dash.route('/edit_server', methods=['POST', 'GET'])
 @requires_authorization
 def edit_server():
@@ -104,7 +104,7 @@ def edit_server():
 
     return render_template('dash_serveredit.html', serverdata=serverdata, msg=msg, hsitekey=hsitekey)
 
-
+# Vote for your favorite server
 @dash.route('/vote_server', methods=['POST', 'GET'])
 @requires_authorization
 def vote():
@@ -160,7 +160,7 @@ def vote():
 
     return render_template('dash_vote.html', serverdata=serverdata, msg=msg, hsitekey=hsitekey)
 
-
+# write a review for a server
 @dash.route('/review',methods=['POST', 'GET'])
 @requires_authorization
 def review():
@@ -187,14 +187,20 @@ def review():
             cur.execute("SELECT * FROM reviews WHERE dcuserid = (%s) and servername = (%s)", (user.id, review_server))
             revserver = cur.fetchall()
             cur.close()
-
+            
             if revserver:
                 msg="you already reviewed that server, and reviews are final. (RIP)"
 
             else:
+                # get the server id from the database 
+                cur = conn.cursor()
+                cur.execute("SELECT serverid FROM servers WHERE servername = (%s)", (review_server))
+                serverid_sql = cur.fetchall()
+                cur.close()
+
                 cur = conn.cursor()
                 # insert data into database
-                cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat) VALUES (%s,%s,%s, CURRENT_TIMESTAMP)", (review_server, review_txt, user.id))
+                cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat, serverid) VALUES (%s,%s,%s,CURRENT_TIMESTAMP,%s)", (review_server, review_txt, user.id,serverid_sql))
                 revserver = cur.fetchall()
                 cur.close()
                 conn.commit()
