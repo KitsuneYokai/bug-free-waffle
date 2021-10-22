@@ -118,9 +118,9 @@ def vote():
     serverdata = cur.fetchall()
     cur.close()
 
-    if request.method == 'POST' and 'chose_server' in request.form:
+    if request.method == 'POST' and 'choose_server' in request.form:
         
-        chose_server =  request.form['chose_server']
+        chose_server =  request.form['choose_server']
 
         user = discord.fetch_user()
 
@@ -174,10 +174,10 @@ def review():
     serverdata = cur.fetchall()
     cur.close()
 
-    if request.method == 'POST' and 'server_select' in request.form and 'review_text' in request.form:
+    if request.method == 'POST' and 'choose_server' in request.form and 'server_text' in request.form:
         
-        review_server = request.form['server_select']
-        review_txt = request.form['review_text']
+        review_server = request.form['choose_server']
+        review_txt = request.form['server_text']
         user = discord.fetch_user()
 
         if hcaptcha.verify():

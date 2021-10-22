@@ -37,13 +37,13 @@
             <div class="col">
                 <div style="background: rgba(52,58,64,0.9);border-radius: 30px;padding: 20px;">
                     <form method="POST" autocomplete="off" action="/review">
-                        <h2 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 2%;">Dont be rude</h2><select class="form-select" id="chose_server" name="chose_server" style="border-style: none;background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-400); margin-bottom: 2%">
+                        <h2 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 2%;">Dont be rude</h2><select class="form-select" id="chose_server" name="choose_server" style="border-style: none;background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-400); margin-bottom: 2%">
 {% for servername in  serverdata %}
 <option>{{servername.servername}}</option>
 {% endfor %}
 </select><textarea class="form-control" id="server_text" placeholder="Write your review here" style="font-family: 'Noto Sans JP', sans-serif;background: rgba(33,37,41,0.74);border-radius: 30px;border-style: none;height: 150px;color: var(--bs-gray-400);" name="server_text"></textarea>
                         <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-top: 3%;text-align: center;">!!! Please note that reviews are final, and cannot be edited later !!!</p><script src="https://hcaptcha.com/1/api.js" async defer></script> <div class="h-captcha" data-sitekey="{{hsitekey}}"></div>
-                        <p style="color: var(--bs-gray-400);font-weight: bold;margin-top: 2%;">{{msg}}</p><button class="btn btn-success" id="Send_review" type="button" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);font-weight: bold;">Send review</button>
+                        <p style="color: var(--bs-gray-400);font-weight: bold;margin-top: 2%;">{{msg}}</p><button class="btn btn-success" id="Send_review" type="submit" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);font-weight: bold;">Send review</button>
                     </form>
                 </div>
             </div>

@@ -6,10 +6,10 @@ serverpage = Blueprint('serverpage', __name__)
 @serverpage.route("/<servern>")
 def index(servern):
     
-    # Make mysql connection & look if the provided servername exists in the database
+    # get serverinformation
     conn = mysql.connect()
     cur = conn.cursor()
-    # write data to database
+    # select data from database based on URL (servername)
     cur.execute("SELECT servername, serverurl, server_text, discordserverid, registered_by, votes  FROM servers WHERE servername = (%s)", (servern))
     servername = cur.fetchall()
     cur.close()
