@@ -54,9 +54,10 @@ async def reg_server():
                 #TODO add hcaptcha to the form
                 cur = conn.cursor()
                 # write data to database
-                cur.execute("INSERT INTO servers(servername, serverurl, discordserverid, server_text, registered_by) VALUES (%s,%s,%s,%s,%s)", (servername_input, serverurl_input, discordid_input, servertext_input, user.id))
+                cur.execute("INSERT INTO servers(servername, serverurl, discordserverid, server_text, registered_by, votes) VALUES (%s,%s,%s,%s,%s,0)", (servername_input, serverurl_input, discordid_input, servertext_input, user.id))
                 cur.close()
                 conn.commit()
+
                 msg="Your server has been successfully registered"
         
         else:
@@ -65,7 +66,7 @@ async def reg_server():
 
     return render_template('dash_register.html', msg=msg, hsitekey=hsitekey)
 
-
+# TODO remove changing names(servername only) + add sql to check if the name already exists in the db
 @dash.route('/edit_server', methods=['POST', 'GET'])
 @requires_authorization
 def edit_server():
@@ -164,11 +165,42 @@ def vote():
 @requires_authorization
 def review():
     msg=""
+    
+    conn = mysql.connect()
+    cur = conn.cursor()
+    
+    # Get servernames and to insert into the form
+    cur.execute('SELECT servername FROM servers')
+    serverdata = cur.fetchall()
+    cur.close()
 
     if request.method == 'POST' and 'server_select' in request.form and 'review_text' in request.form:
         
         review_server = request.form['server_select']
         review_txt = request.form['review_text']
-        
+        user = discord.fetch_user()
 
-    return render_template('dash_review.html', msg=msg, hsitekey=hsitekey)
+        if hcaptcha.verify():
+
+            cur = conn.cursor()
+            # look if the user already wrote a review for that server
+            cur.execute("SELECT * FROM reviews WHERE dcuserid = (%s) and servername = (%s)", (user.id, review_server))
+            revserver = cur.fetchall()
+            cur.close()
+
+            if revserver:
+                msg="you already reviewed that server, and reviews are final. (RIP)"
+
+            else:
+                cur = conn.cursor()
+                # insert data into database
+                cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat) VALUES (%s,%s,%s, CURRENT_TIMESTAMP)", (review_server, review_txt, user.id))
+                revserver = cur.fetchall()
+                cur.close()
+                conn.commit()
+                msg="Your review has been submitted and has now a chance to be shown on the serverpage"
+
+        else:
+            msg="Please solve the captcha"
+
+    return render_template('dash_review.html', msg=msg, hsitekey=hsitekey, serverdata=serverdata)

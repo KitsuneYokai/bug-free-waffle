@@ -6,15 +6,17 @@ I will write more here in a few days.
 
 ## TODO's
 
-- [  ] Write review
-  
 - [  ] Add Dashboard/vote/review button to navbar
 
 - [  ] Optimize templates
 
+- [  ] Add user count, max pp, plays ... to serverpage
+
 - [  ] API route to get the voted server from the user
 
 - [  ] Add reviews to the serverpage (with discord name/icon of the user)
+
+- [✔️] Write review
 
 - [✔️] Edit server
 
