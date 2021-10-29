@@ -6,6 +6,8 @@ I will write more here in a few days.
 
 ## TODO's
 
+- [  ] Add delete btn to edit server
+
 - [  ] Add Dashboard/vote/review button to navbar
 
 - [  ] Optimize templates
@@ -15,6 +17,10 @@ I will write more here in a few days.
 - [  ] API route to get the voted server from the user
 
 - [  ] Add reviews to the serverpage (with discord name/icon of the user)
+
+- [  ] Add browser extention
+
+- [  ] Add connect to server button
 
 - [✔️] Write review
 

@@ -169,13 +169,14 @@ def review():
     conn = mysql.connect()
     cur = conn.cursor()
     
-    # Get servernames and to insert into the form
-    cur.execute('SELECT servername FROM servers')
+    # Get servernames to insert into the form
+    cur.execute('SELECT servername, serverid FROM servers')
     serverdata = cur.fetchall()
     cur.close()
 
-    if request.method == 'POST' and 'choose_server' in request.form and 'server_text' in request.form:
+    if request.method == 'POST' and 'choose_server' in request.form and 'server_text' in request.form and 'serverid' in request.form:
         
+        serverid = request.form['serverid']
         review_server = request.form['choose_server']
         review_txt = request.form['server_text']
         user = discord.fetch_user()
@@ -184,7 +185,7 @@ def review():
 
             cur = conn.cursor()
             # look if the user already wrote a review for that server
-            cur.execute("SELECT * FROM reviews WHERE dcuserid = (%s) and servername = (%s)", (user.id, review_server))
+            cur.execute("SELECT * FROM reviews WHERE dcuserid = (%s) and serverid = (%s)", (user.id, serverid))
             revserver = cur.fetchall()
             cur.close()
             
@@ -192,18 +193,11 @@ def review():
                 msg="you already reviewed that server, and reviews are final. (RIP)"
 
             else:
-                # get the server id from the database 
                 cur = conn.cursor()
-                cur.execute("SELECT serverid FROM servers WHERE servername = (%s)", (review_server))
-                serverid_sql = cur.fetchall()
-                cur.close()
-
-                cur = conn.cursor()
-                # insert data into database
-                cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat, serverid) VALUES (%s,%s,%s,CURRENT_TIMESTAMP,%s)", (review_server, review_txt, user.id,serverid_sql))
-                revserver = cur.fetchall()
+                cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat, serverid) VALUES (%s,%s,%s,CURRENT_TIMESTAMP,%s)", (review_server, review_txt, user.id, serverid))
                 cur.close()
                 conn.commit()
+
                 msg="Your review has been submitted and has now a chance to be shown on the serverpage"
 
         else:
