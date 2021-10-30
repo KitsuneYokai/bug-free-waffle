@@ -51,7 +51,6 @@ async def reg_server():
 
             # If the user dosnt have a server, insert the data from the form into the database
             else:
-                #TODO add hcaptcha to the form
                 cur = conn.cursor()
                 # write data to database
                 cur.execute("INSERT INTO servers(servername, serverurl, discordserverid, server_text, registered_by, votes) VALUES (%s,%s,%s,%s,%s,0)", (servername_input, serverurl_input, discordid_input, servertext_input, user.id))
@@ -180,7 +179,7 @@ def review():
         review_server = request.form['choose_server']
         review_txt = request.form['server_text']
         user = discord.fetch_user()
-
+        
         if hcaptcha.verify():
 
             cur = conn.cursor()
@@ -193,6 +192,7 @@ def review():
                 msg="you already reviewed that server, and reviews are final. (RIP)"
 
             else:
+                # Insert data into the database
                 cur = conn.cursor()
                 cur.execute("INSERT INTO reviews(servername, revtext, dcuserid, revat, serverid) VALUES (%s,%s,%s,CURRENT_TIMESTAMP,%s)", (review_server, review_txt, user.id, serverid))
                 cur.close()
@@ -204,3 +204,32 @@ def review():
             msg="Please solve the captcha"
 
     return render_template('dash_review.html', msg=msg, hsitekey=hsitekey, serverdata=serverdata)
+
+@dash.route('/delete_server/<servers>',methods=['POST'])
+@requires_authorization
+def delete_server(servers):
+    msg = ""
+    user = discord.fetch_user()
+
+    if hcaptcha.verify():
+
+        if request.method == 'POST' and delete_server in request.form:
+            conn = mysql.connect()
+            cur = conn.cursor()
+            cur.execute("SELECT * FROM servers WHERE registered_by = %s", (user.id))
+            servers = cur.fetchall()
+            cur.close()
+
+            if servers:
+                cur.execute("DELETE * FROM servers WHERE registered_by = %s", (user.id))
+                cur.close()
+                conn.commit()
+                msg = "Bye Bye server. It was a nice time"
+
+        else:
+            msg="What da fuq are you doing?"
+    
+    else:
+        msg="Please solve the captcha"
+
+    return msg

@@ -6,7 +6,9 @@ I will write more here in a few days.
 
 ## TODO's
 
-- [  ] Add delete btn to edit server
+- [✔️] Add delete btn to edit server
+
+- [  ] Fix the modal on the edit page to actually open
 
 - [  ] Add Dashboard/vote/review button to navbar
 
@@ -21,6 +23,8 @@ I will write more here in a few days.
 - [  ] Add browser extention
 
 - [  ] Add connect to server button
+
+- [  ] Add namechecking to register / edited
 
 - [✔️] Write review
 
