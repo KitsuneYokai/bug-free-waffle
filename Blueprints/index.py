@@ -3,6 +3,7 @@ from flask import Blueprint, render_template
 index = Blueprint('index', __name__)
 from db import mysql
 
+
 """INDEX"""
 @index.route('/')
 def home():

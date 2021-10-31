@@ -8,7 +8,9 @@ I will write more here in a few days.
 
 - [✔️] Add delete btn to edit server
 
-- [  ] Fix the modal on the edit page to actually open
+- [✔️] Fix the modal on the edit page to actually load
+
+- [  ] Add reviews to the serverpage (WIP)
 
 - [  ] Add Dashboard/vote/review button to navbar
 
@@ -18,11 +20,11 @@ I will write more here in a few days.
 
 - [  ] API route to get the voted server from the user
 
-- [  ] Add reviews to the serverpage (with discord name/icon of the user)
+- [  ] Add reviews to the serverpage (WIP)
 
 - [  ] Add browser extention
 
-- [  ] Add connect to server button
+- [  ] Add connect to server button to serverpage
 
 - [  ] Add namechecking to register / edited
 
@@ -54,7 +56,7 @@ I will write more here in a few days.
 
 ## Ideas
  - Add the serverteam member's to the serverpage
- - Add social media buttons
+ - Add social media buttons for the servers
  - add discord bot to vote through the discord server
  - Maybe add a userpage?
 

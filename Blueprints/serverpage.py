@@ -4,6 +4,7 @@ from waffle import discord
 
 serverpage = Blueprint('serverpage', __name__)
 
+
 @serverpage.route("/<servern>")
 def index(servern):
     
