@@ -6,6 +6,8 @@ It is currently in development (and also lacking a name).
 
 You can check the TODO´s list to check what's working and what isn't.
 
+You can take a look at it by visiting https://osulist.kitsu.cf
+
 ## TODO's
 
 - [ ] Add reviews to the server page (WIP)
