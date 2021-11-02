@@ -22,7 +22,7 @@ You can take a look at it by visiting https://osulist.kitsu.cf
 
 - [ ] Fix animations
 
-- [ ] Optimize/cleanup/spellchecking
+- [ ] Optimize/Optimize for mobile/cleanup/spellchecking
 
 - [ ] Add discord bot vote functionality
 
