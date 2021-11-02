@@ -1,32 +1,36 @@
 # Welcome to Bug-Free-Waffle!
 
-Bug free waffle is a private osu server listing page.
+Bug-free-Waffle is a private Osu! server listing page.
 
-I will write more here in a few days.
+It is currently in development (and also lacking a name).
+
+You can check the TODO´s list to check what's working and what isn't.
 
 ## TODO's
 
-- [✔️] Add delete btn to edit server
+- [ ] Add reviews to the server page (WIP)
 
-- [✔️] Fix the modal on the edit page to actually load
+- [ ] Add namechecking to register / edited
 
-- [  ] Add reviews to the serverpage (WIP)
+- [ ] Add a time to to the flash dash msg if the user already voted, containing the remaining time
 
-- [  ] Add Dashboard/vote/review button to navbar
+- [ ] Add browser extention
 
-- [  ] Optimize templates
+- [ ] Add connect to server button to server page
 
-- [  ] Add user count, max pp, plays ... to serverpage
+- [ ] Fix animations
 
-- [  ] API route to get the voted server from the user
+- [ ] Optimize/cleanup/spellchecking
 
-- [  ] Add reviews to the serverpage (WIP)
+- [ ] Add discord bot vote functionality
 
-- [  ] Add browser extention
+- [✔️] Add Dashboard/vote/review button to navbar
 
-- [  ] Add connect to server button to serverpage
+- [✔️] API route to get the voted server from the user
 
-- [  ] Add namechecking to register / edited
+- [✔️] Fix the modal on the edit page to load
+
+- [✔️] Add delete button to edit server
 
 - [✔️] Write review
 
@@ -34,31 +38,37 @@ I will write more here in a few days.
 
 - [✔️] Register server
 
-- [✔️] Serverpage (kinda done, it definitely need a final touch)
+- [✔️] Server page (kinda done, it needs a final touch tough)
 
 - [✔️] Index redirect to the right server page
 
 - [✔️] Vote (users can vote every 12h)
 
-- [✔️] Load servers by votes from database & display on index
+- [✔️] Load servers by votes from the database & display them on the index page
 
 - [✔️] Database(MySQL)
 
-- [✔️] Templates (mostly done i think)
+- [✔️] Templates (mostly done I think)
 
 - [✔️] Add msg to forms, so the user knows when the server is registered/voted ...
 
-- [✔️] Add favicon & votes from the server to the servercards
+- [✔️] Add favicon & votes from the server to the server cards
 
 - [✔️] Add hCaptcha
 
 - [✔️] Login
 
 ## Ideas
- - Add the serverteam member's to the serverpage
- - Add social media buttons for the servers
- - add discord bot to vote through the discord server
- - Maybe add a userpage?
 
-Have an idea or a name for the project?
-Feel free to dm me on dc KitsuneYokai#7746
+- Add social media buttons for the servers
+
+- add discord bot to vote through the discord server
+
+- Maybe add a user page?
+
+## Endnote
+
+Wellllll,
+If you have any idea (names included) for the project, let me know in discord. KitsuneYokai#7746
+
+**PYTHON TO THE MOON**

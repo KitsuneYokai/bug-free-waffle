@@ -7,14 +7,23 @@
     <title>bug-free-waffle</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
-    <link rel="stylesheet" href="static/css/000011hintergrund_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/000009hintergrund_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="static/css/000012scrollbar.css">
+    <link rel="stylesheet" href="static/css/000010scrollbar.css">
 </head>
 
 <body style="background: var(--bs-gray-900);">
     <nav class="navbar navbar-light navbar-expand-md sticky-top" style="background: rgba(52,58,64,0.9);border-bottom-right-radius: 30px;border-bottom-left-radius: 30px;">
-        <div class="container-fluid"><a class="navbar-brand text-uppercase" href="/" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-left: 1%;">bug-free-waffle</a><a class="btn btn-danger" role="button" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;" href="/logout">Logout</a></div>
+        <div class="container-fluid"><a class="navbar-brand text-uppercase" href="/" style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-left: 1%;">bug-free-waffle</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/dash" style="font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-500);">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/vote_server" style="font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-500);">Vote</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/review" style="font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-500);">Review</a></li>
+                </ul>
+            </div><a class="btn btn-primary" role="button" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;border-style: solid;border-color: var(--bs-gray-400);" href="/login">Login</a>
+        </div>
     </nav>
     <div class="bg"><div class="3eck">
             <ul class="dreieck">
@@ -48,11 +57,13 @@
             </div>
         </div>
     </section>
-    <footer style="margin-top: 20%;">
-        <div style="height: 30px;background: rgba(52,58,64,0.9);border-top-left-radius: 30px;border-top-right-radius: 30px;"></div>
+    <footer class="text-center" style="overflow-y: hidden;margin-top: 15%;">
+        <div class="col" style="background: rgba(52,58,64,0.9);border-top-left-radius: 30px;border-top-right-radius: 30px;padding: 3px;padding-top: 15px;">
+            <p style="color: var(--bs-gray-400);font-weight: bold;font-family: 'Noto Sans JP', sans-serif;">Made with&nbsp;<a href="https://emojiterra.com/de/rotes-herz/">❤️</a>&nbsp;by&nbsp;<a href="https://discord.gg/UUBXca2FkM" style="color: var(--bs-gray-400);">KitsuneYokai#7746</a>&nbsp; &nbsp;<a href="https://github.com/KitsuneYokai/bug-free-waffle" style="color: rgb(14,15,16);"><i class="fa fa-github"></i>&nbsp;GITHUB</a><br></p>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/000014bs-init.js"></script>
+    <script src="static/js/000012bs-init.js"></script>
 </body>
 
 </html>

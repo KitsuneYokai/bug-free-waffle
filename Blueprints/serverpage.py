@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template
-from db import mysql
-from waffle import discord
+from flask import Blueprint, render_template, request
+
 
 serverpage = Blueprint('serverpage', __name__)
+
+
+from db import mysql
 
 
 @serverpage.route("/<servern>")
@@ -16,9 +18,11 @@ def index(servern):
     servername = cur.fetchall()
     cur.close()
 
+
+    # Reviews
     cur = conn.cursor()
-    cur.execute("SELECT * FROM reviews WHERE servername = (%s)", (servern))
+    cur.execute("SELECT * FROM reviews WHERE servername = (%s) LIMIT 20", (servern))
     dcrevid = cur.fetchall()
     cur.close()
     
-    return render_template("servertemplate.html", servername=servername, reviews=dcrevid)
+    return render_template("servertemplate.html", servername=servername, review=dcrevid)

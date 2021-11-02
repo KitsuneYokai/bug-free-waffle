@@ -17,12 +17,12 @@ hsitekey = config('HCAPTCHA_SITE_KEY')
 
 
 @dash.errorhandler(Unauthorized)
-async def redirect_unauthorized(e):
+def redirect_unauthorized(e):
     return redirect(url_for("login.index"))
 
 
 """routes/Dashboard"""
-@dash.route('/dash')
+@dash.route('/dash',)
 @requires_authorization
 def index():
     return render_template('dashboard.html')
@@ -30,7 +30,7 @@ def index():
 
 # Register your server to the site   
 @dash.route('/register_server', methods=["GET","POST"])
-async def reg_server():
+def reg_server():
     # Variables
     user = discord.fetch_user()
     msg=""
