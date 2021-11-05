@@ -1,4 +1,4 @@
-from flask import jsonify, Blueprint
+from quart import jsonify, Blueprint
 
 
 voted = Blueprint('voted', __name__)
@@ -9,7 +9,7 @@ from limiter import Limiter
 
 #TODO make limiter work
 @voted.route("/if_voted<dcid>")
-def if_voted(dcid):
+async def if_voted(dcid):
     conn = mysql.connect()
 
     cur = conn.cursor()
@@ -19,4 +19,4 @@ def if_voted(dcid):
     cur.close()
     conn.close()
 
-    return jsonify(resault)
+    return await jsonify(resault)

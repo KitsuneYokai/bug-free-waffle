@@ -1,5 +1,4 @@
-from flask import Blueprint, render_template, request
-
+from quart import Blueprint, render_template
 
 serverpage = Blueprint('serverpage', __name__)
 
@@ -8,7 +7,7 @@ from db import mysql
 
 
 @serverpage.route("/<servern>")
-def index(servern):
+async def index(servern):
     
     # get serverinformation
     conn = mysql.connect()
@@ -25,4 +24,4 @@ def index(servern):
     dcrevid = cur.fetchall()
     cur.close()
     
-    return render_template("servertemplate.html", servername=servername, review=dcrevid)
+    return await render_template("servertemplate.html", servername=servername, review=dcrevid)

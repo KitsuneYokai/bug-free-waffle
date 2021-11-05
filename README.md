@@ -6,11 +6,17 @@ It is currently in development (and also lacking a name).
 
 You can check the TODO´s list to check what's working and what isn't.
 
+There is a test instance running24/7 @ https://osulistdev.kitsu.cf that can be used.
+https://osulistdev.kitsu.cf development adress. Only aviable when i am working on it
 ## TODO's
 
 - [ ] Add reviews to the server page (WIP)
 
-- [ ] Add namechecking to register / edited
+- [ ] Make KitsuCaptcha (Basically the bot sends a dm to the user & the user has to react on it)
+
+- [ ] Add namechecking to register / edit
+
+- [ ] Add Tagging pills (Like Relax/AP/Vanilla/Cheating/good Anticheat ...)
 
 - [ ] Add a time to to the flash dash msg if the user already voted, containing the remaining time
 
@@ -54,8 +60,6 @@ You can check the TODO´s list to check what's working and what isn't.
 
 - [✔️] Add favicon & votes from the server to the server cards
 
-- [✔️] Add hCaptcha
-
 - [✔️] Login
 
 ## Ideas
@@ -66,9 +70,14 @@ You can check the TODO´s list to check what's working and what isn't.
 
 - Maybe add a user page?
 
+## Notes
+
+replace 'import discord' in your quart.discord.client with 'import nextcord as discord'. Access it by pressing CRTL + Left click on the 
+import in waffle.py (quart_discord) and click again on .client
+
 ## Endnote
 
-Wellllll,
-If you have any idea (names included) for the project, let me know in discord. KitsuneYokai#7746
+Well,
+If you have any idea (names included) for the project, let me know in Discord. KitsuneYokai#7746
 
 **PYTHON TO THE MOON**

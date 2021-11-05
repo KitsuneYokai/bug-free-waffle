@@ -1,12 +1,12 @@
-from flask import Blueprint, render_template
+from quart import Blueprint, render_template
 
 index = Blueprint('index', __name__)
 from db import mysql
 
 
 """INDEX"""
-@index.route('/')
-def home():
+@index.route('/',methods=["POST","GET"])
+async def home():
 
     # Make MySQL connection
     conn = mysql.connect()
@@ -17,4 +17,4 @@ def home():
     servername = list(cur.fetchall())
     cur.close()
 
-    return render_template('index.html', servername=servername)
+    return await render_template('index.html', servername=servername)
