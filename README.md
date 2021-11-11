@@ -20,6 +20,8 @@ You can take a look at it by visiting https://osulist.kitsu.cf or https://osulis
 
 - [ ] Add namechecking to register / edited (Almost done)
 
+- [ ] Add server category pills (e.g Vanilla, Relax, Autopilot, Autoplay?, cheating, non-cheating ... (you know what i mean (i hope (i realy do ))))
+
 - [✔️] Add changable servericon
 
 - [✔️] Add discord bot vote functionality

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static/css/000010hintergrund.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="static/css/000012scrollbar.css">
+    <link rel="stylesheet" href="static/css/000011scrollbar.css">
 </head>
 
 <body style="background: var(--bs-gray-900);">
@@ -43,29 +43,29 @@
             </ul>
 </div></div>{% for servername in servername %}
     <section style="margin-top: 10%;height: auto;">
-        <div class="container" style="border-radius: 30px;padding: 1%;">
-            <div class="col">
-                <h2 class="text-break" data-aos="zoom-out-right" data-aos-duration="1500" data-aos-once="true" style="border-style: none;color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-bottom: 1%;font-weight: bold;">Welcome to&nbsp;<strong>{{servername.servername}}'s serverpage</strong><br></h2>
+        <div class="container" data-aos="fade-up" data-aos-duration="1500" style="border-radius: 30px;padding: 1%;">
+            <div class="col-xl-10 offset-xl-0">
+                <h2 class="text-break" style="border-style: none;color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-bottom: 2%;font-weight: bold;">Welcome to&nbsp;<strong>{{servername.servername}}'s serverpage</strong><br></h2>
             </div>
             <div style="background: rgba(52,58,64,0.9);border-radius: 30px;padding: 2%;">
-                <div class="row g-0 justify-content-center">
+                <div class="row g-0 row-cols-2 justify-content-center">
                     <div class="col-auto col-md-6 col-xl-4 d-flex justify-content-center align-self-center">
                         <div style="height: auto;">
-                            <div class="col-auto text-center align-self-center">
-                                <h3 class="text-center" data-aos="zoom-out-right" data-aos-duration="1500" data-aos-delay="300" data-aos-once="true" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;padding-bottom: 2%;margin-top: 2%;">&nbsp;{{servername.servername}}</h3><img data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600" src="{{servername.servericon}}" style="margin-bottom: 3%;min-height: 250px;max-height: 350px;border-style: none;width: auto;height: auto;border-radius: 30px;">
-                                <p data-aos="zoom-out-right" data-aos-duration="1500" data-aos-delay="900" data-aos-once="true" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP';font-size: 18px;">Current Votes: <strong>{{servername.votes}}</strong><br><br><span id="votes_num"></span></p>
+                            <div class="col-auto col-xl-11 text-center align-self-center">
+                                <h3 class="text-center" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;padding-bottom: 2%;margin-top: 2%;">&nbsp;{{servername.servername}}</h3><img src="{{servername.servericon}}" style="margin-bottom: 3%;min-height: 250px;max-height: 350px;border-style: none;width: auto;height: auto;border-radius: 30px;">
+                                <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP';font-size: 18px;">Current Votes: <strong>{{servername.votes}}</strong><br><br><span id="votes_num"></span></p>
                             </div>
-                            <div class="col" data-aos="zoom-out-right" data-aos-duration="1500" data-aos-delay="1200" data-aos-once="true" style="margin-bottom: 3%;"><a class="btn btn-info d-xl-flex justify-content-xl-center" role="button" id="server_website" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);font-weight: bold;width: 100%;" href="{{servername.serverurl}}">{{servername.servername}}'s website<br></a></div>
-                            <div class="col" data-aos="zoom-out-right" data-aos-duration="1500" data-aos-once="true"><a class="btn btn-secondary" role="button" id="vote" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);margin-bottom: 5%;width: 100%;" href="/vote_server"><strong>Vote for&nbsp;{{servername.servername}}</strong><br></a></div>
-                            <div class="col" data-aos="zoom-out-right" data-aos-duration="1500" data-aos-once="true"><iframe class="d-xl-flex justify-content-xl-center" src="https://discord.com/widget?id={{servername.discordserverid}}&theme=dark" style="border-radius: 25px; margin-bottom: 3%" width="100%" height="500px" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+                            <div class="col" style="margin-bottom: 3%;"><a class="btn btn-info d-xl-flex justify-content-xl-center" role="button" id="server_website" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);font-weight: bold;width: 100%;" href="{{servername.serverurl}}">{{servername.servername}}'s website<br></a></div>
+                            <div class="col"><a class="btn btn-secondary" role="button" id="vote" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;color: var(--bs-gray-400);margin-bottom: 5%;width: 100%;" href="/vote_server"><strong>Vote for&nbsp;{{servername.servername}}</strong><br></a></div>
+                            <div class="col"><iframe class="d-xl-flex justify-content-xl-center" src="https://discord.com/widget?id={{servername.discordserverid}}&theme=dark" style="border-radius: 25px; margin-bottom: 3%" width="100%" height="500px" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
                         </div>
                         <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-top: 3%;"></p>
                         <p style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;"></p>
                         <div></div>
                     </div>
-                    <div class="col">
+                    <div class="col-xl-8">
                         <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;margin-bottom: 3%;padding-bottom: 2%;margin-top: 3%;text-align: left;">Server description</h3>
-                        <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true" style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP', sans-serif;">
+                        <div style="background: rgba(33,37,41,0.74);border-radius: 30px;font-family: 'Noto Sans JP', sans-serif;">
                             <p id="server_desc" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;padding-top: 2%;padding-left: 2%;padding-bottom: 2%;padding-right: 1%;margin-bottom: 10%;"><strong>{{servername.server_text}}</strong><br></p>
                         </div>
                         <h4 class="text-start" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">Here are some reviews of&nbsp;<strong>{{servername.servername}} players</strong><br><br></h4>{% for dcuserid in review %}
@@ -73,7 +73,7 @@
                             <div class="row g-0">
                                 <div class="col-10 col-xl-4" style="margin: 2%;">
                                     <div class="row row-cols-2 justify-content-start align-items-start">
-                                        <div class="col-xl-12"><img style="border-style: none;border-radius: 30px;max-height: 64px;" src="static/img/000013avatarKY.gif">
+                                        <div class="col-xl-12"><img style="border-style: none;border-radius: 30px;max-height: 64px;" src="static/img/000012avatarKY.gif">
                                             <h4 class="text-end d-xl-flex justify-content-xl-end align-items-xl-end" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-top: 3%;">{{dcuserid.dcname}}</h4>
                                         </div>
                                     </div>
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/000014bs-init.js"></script>
+    <script src="static/js/000013bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 
