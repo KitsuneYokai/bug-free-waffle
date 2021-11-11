@@ -6,25 +6,23 @@ It is currently in development (and also lacking a name).
 
 You can check the TODO´s list to check what's working and what isn't.
 
-You can take a look at it by visiting https://osulist.kitsu.cf
+You can take a look at it by visiting https://osulist.kitsu.cf or https://osulistdev.kitsu.cf when im working on it
 
 ## TODO's
 
-- [ ] Add reviews to the server page (WIP)
-
-- [ ] Add namechecking to register / edited
-
 - [ ] Add a time to to the flash dash msg if the user already voted, containing the remaining time
 
-- [ ] Add browser extention
-
-- [ ] Add connect to server button to server page
-
-- [ ] Fix animations
+- [ ] Add connect to server button to server page (To download a osu shortcut with the -devserverflag)
 
 - [ ] Optimize/Optimize for mobile/cleanup/spellchecking
 
-- [ ] Add discord bot vote functionality
+- [ ] Add reviews to the server page (WIP)
+
+- [ ] Add namechecking to register / edited (Almost done)
+
+- [✔️] Add changable servericon
+
+- [✔️] Add discord bot vote functionality
 
 - [✔️] Add Dashboard/vote/review button to navbar
 
@@ -72,5 +70,3 @@ You can take a look at it by visiting https://osulist.kitsu.cf
 
 Wellllll,
 If you have any idea (names included) for the project, let me know in discord. KitsuneYokai#7746
-
-**PYTHON TO THE MOON**

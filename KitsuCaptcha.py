@@ -1,1 +1,0 @@
-from waffle import app

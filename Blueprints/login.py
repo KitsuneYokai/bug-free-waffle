@@ -8,7 +8,6 @@ from waffle import discord
 async def index():
     return await discord.create_session()
 
-
 @login.route("/callback/")
 async def callback():
     await discord.callback()
