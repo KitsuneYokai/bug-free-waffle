@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/000012fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="static/css/000010hintergrund.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -52,7 +54,7 @@
                     <div class="col-11 col-xl-11" style="margin-top: -1%;margin-left: 3%;">
                         <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="900" style="color: var(--bs-gray-600);font-family: 'Noto Sans JP', sans-serif;font-weight: bold;">osu private servers, just one click away</p>
                     </div>
-                    <div class="col-6 col-xl-2" style="margin-top: -1%;margin-left: 5%;"><button class="btn btn-success" data-aos="fade-right" data-aos-duration="2400" data-aos-delay="1750" type="button" style="color: var(--bs-gray-400);background: rgb(50,56,62);border-radius: 60px;border-style: none;font-family: 'Noto Sans JP', sans-serif;">Tell me more!</button></div>
+                    <div class="col-6 col-xl-2" style="margin-top: -1%;margin-left: 5%;"><a class="btn btn-success" role="button" data-aos="fade-right" data-aos-duration="2400" data-aos-delay="1750" style="color: var(--bs-gray-400);background: rgb(50,56,62);border-radius: 60px;border-style: none;font-family: 'Noto Sans JP', sans-serif;" href="#FAQ">Tell me more!</a></div>
                 </div>
             </div>
         </header>
@@ -84,24 +86,24 @@
             </div>
         </div>
     </section>
-    <section style="margin-top: 0;">
+    <section id="FAQ" style="margin-top: 0;">
         <div class="container" data-aos="zoom-in-up" data-aos-duration="1500" style="margin-bottom: 15%;">
             <div class="row">
                 <div class="col-auto col-md-12">
-                    <div id="FAQ" style="background: rgba(52,58,64,0.9);height: auto;border-radius: 30px;padding: 1%;">
+                    <div style="background: rgba(52,58,64,0.9);height: auto;border-radius: 30px;padding: 1%;">
                         <section style="padding: 1%;color: rgb(33, 37, 41);font-family: 'Noto Sans JP', sans-serif;">
                             <h2 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-bottom: 2%;padding: 1%;"><i class="fa fa-question-circle"></i>&nbsp; FAQ</h2>
                             <div class="col-auto">
                                 <div data-aos="zoom-in-up" data-aos-duration="1500" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
                                     <div class="col">
                                         <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">What is this site?</h3>
-                                        <p class="text-break" style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;">This site is a list for Osu! private servers (3rd party servers). You can vote for your favorite server and write a review for it.</p>
+                                        <p class="text-break" style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;">This site is a list for Osu! private servers (3rd party servers).<br>You can vote for your favorite server and write a review for it.</p>
                                     </div>
                                 </div>
                                 <div data-aos="zoom-in-up" data-aos-duration="1550" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
                                     <div class="col">
-                                        <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">What do I do?</h3>
-                                        <p class="text-break" style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;">Just&nbsp;click on&nbsp;one server card&nbsp;from&nbsp;above&nbsp;and&nbsp;you&nbsp;will&nbsp;be&nbsp;redirected&nbsp;to&nbsp;a&nbsp;detailed server view.&nbsp;On&nbsp;the server view you&nbsp;can&nbsp;see&nbsp;some&nbsp;information&nbsp;about&nbsp;the&nbsp;server&nbsp;(Discordserver&nbsp;/&nbsp;website&nbsp;/&nbsp;reviews /...)<br></p>
+                                        <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">What do I do now?</h3>
+                                        <p class="text-break" style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;">Just&nbsp;click on&nbsp;one server card&nbsp;from&nbsp;above&nbsp;and&nbsp;you&nbsp;will&nbsp;be&nbsp;redirected&nbsp;to&nbsp;a&nbsp;detailed server view.<br>On&nbsp;the server view you&nbsp;can&nbsp;see&nbsp;some&nbsp;information about&nbsp;the&nbsp;server (Discordserver&nbsp;/&nbsp;website&nbsp;/&nbsp;reviews /...)<br></p>
                                     </div>
                                 </div>
                                 <div data-aos="zoom-in-up" data-aos-duration="1550" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
@@ -117,6 +119,89 @@
                                     </div>
                                 </div>
                             </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="commands" style="margin-top: 0;">
+        <div class="container" data-aos="zoom-in-up" data-aos-duration="1500" style="margin-bottom: 15%;">
+            <div class="row">
+                <div class="col-auto col-md-12">
+                    <div style="background: rgba(52,58,64,0.9);height: auto;border-radius: 30px;padding: 1%;">
+                        <section style="padding: 1%;color: rgb(33, 37, 41);font-family: 'Noto Sans JP', sans-serif;">
+                            <h2 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold;color: var(--bs-gray-400);margin-bottom: 2%;padding: 1%;"><i class="fas fa-robot"></i>&nbsp; The Bot</h2>
+                            <div class="col-auto">
+                                <div data-aos="zoom-in-up" data-aos-duration="1500" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
+                                    <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">The Bot</h3>
+                                    <div class="col">
+                                        <p class="text-break" style="color: var(--bs-gray-500);font-family: 'Noto Sans JP', sans-serif;">The&nbsp;site&nbsp;also&nbsp;gets&nbsp;a&nbsp;discord&nbsp;bot,&nbsp;so&nbsp;you&nbsp;can&nbsp;vote&nbsp;for&nbsp;your favorite Osu! server&nbsp;just&nbsp;by&nbsp;sending&nbsp;a&nbsp;command to the&nbsp;discord&nbsp;server&nbsp;that&nbsp;corresponds&nbsp;to&nbsp;the&nbsp;Osu!&nbsp;Private&nbsp;server.<br></p>
+                                    </div>
+                                </div>
+                                <div data-aos="zoom-in-up" data-aos-duration="1500" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
+                                    <section>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h3 class="text-center" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">Commands</h3>
+                                            </div>
+                                            <div class="col">
+                                                <h3 class="text-center" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">Description</h3>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="row">
+                                            <div class="col">
+                                                <section>
+                                                    <div class="row">
+                                                        <div class="col" style="margin: 1%;">{% for commands in commands %}
+                                                            <div style="background: rgba(52,58,64,0.9);border-radius: 30px;padding-left: 1%;padding-bottom: 1%;padding-right: 1%;padding-top: 4%;margin-bottom: 3%;">
+                                                                <div class="col-auto">
+                                                                    <p class="font-monospace text-break" style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;text-align: center;">{{commands}}</p>
+                                                                </div>
+                                                            </div>{% endfor %}
+                                                        </div>
+                                                        <div class="col" style="margin: 1%;">{% for desc in desc %}
+                                                            <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+                                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-body" style="background-color: rgba(52,58,64,0.9);">
+                                                                            <h3 class="modal-title" style="border-style: none;color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;">Detailed view</h3>
+                                                                            <div class="col-xxl-12 offset-xxl-0">
+                                                                                <p style="font-family: 'Noto Sans JP', sans-serif;color: var(--bs-gray-400);">{{desc}}</p><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-left: 5%;">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><button class="btn btn-primary text-truncate text-break" type="button" style="background: rgba(52,58,64,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;border-style: none;border-color: var(--bs-gray-400);padding: 4%;width: 100%;margin-bottom: 3%;" data-bs-target="#modal-1" data-bs-toggle="modal">{{desc}}<br></button>{% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div data-aos="zoom-in-up" data-aos-duration="1500" style="border-radius: 30px;padding: 4%;background: rgba(33,37,41,0.8);margin-bottom: 5%;">
+                                    <h3 style="color: var(--bs-gray-400);font-family: 'Noto Sans JP', sans-serif;margin-bottom: 3%;">Bot Stats</h3>
+                                    <section>
+                                        <div class="row">
+                                            <div class="col text-center align-self-center" style="color: var(--bs-gray-400);"><i class="fa fa-user" style="transform: scale(1);font-size: 400%;"></i>
+                                                <h3>Watching player</h3>
+                                                <p>{{member}}<br></p>
+                                            </div>
+                                            <div class="col text-center align-self-center" style="color: var(--bs-gray-400);"><i class="fa fa-server" style="transform: scale(1);font-size: 400%;"></i>
+                                                <h3>Watching guilds</h3>
+                                                <p>{{guilds}}<br></p>
+                                            </div>
+                                        </div>
+                                        <div class="col text-center align-self-center" style="color: var(--bs-gray-400);"><i class="fa fa-clock-o" style="transform: scale(1);font-size: 400%;"></i>
+                                            <h3>Uptime</h3>
+                                            <p>{{uptime}}<br></p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div><a class="btn btn-primary" role="button" data-aos="fade-left" data-aos-duration="1500" style="background: rgba(73,80,87,0.9);font-family: 'Noto Sans JP', sans-serif;border-radius: 30px;margin-right: 1%;border-style: none;border-color: var(--bs-gray-400);" href="https://discord.com/oauth2/authorize?client_id=824256090929627136&amp;scope=bot&amp;permissions=4331753025">Invite me to your server</a>
                         </section>
                     </div>
                 </div>
@@ -147,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/000013bs-init.js"></script>
+    <script src="static/js/000014bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 

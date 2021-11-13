@@ -4,7 +4,7 @@ class vote(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-    @commands.command()
+    @commands.command(description="Vote for the server you send the message in")
     async def vote_server(self, ctx):
         dc_serverid = ctx.message.guild.id
         user = ctx.message.author.id

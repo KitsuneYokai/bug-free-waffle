@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server Version:               10.5.12-MariaDB-0ubuntu0.21.04.1 - Ubuntu 21.04
+-- Host:                         192.168.178.2
+-- Server Version:               10.6.4-MariaDB-1:10.6.4+maria~focal - mariadb.org binary distribution
 -- Server Betriebssystem:        debian-linux-gnu
 -- HeidiSQL Version:             11.3.0.6295
 -- --------------------------------------------------------
@@ -13,11 +13,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Exportiere Datenbank Struktur für bug-free-waffle
-CREATE DATABASE IF NOT EXISTS `bug-free-waffle` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `bug-free-waffle`;
+-- Exportiere Datenbank Struktur für bug-free-waffle-dev
+CREATE DATABASE IF NOT EXISTS `bug-free-waffle-dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `bug-free-waffle-dev`;
 
--- Exportiere Struktur von Tabelle bug-free-waffle.reviews
+-- Exportiere Struktur von Tabelle bug-free-waffle-dev.reviews
 CREATE TABLE IF NOT EXISTS `reviews` (
   `servername` varchar(50) NOT NULL DEFAULT '',
   `revtext` varchar(400) DEFAULT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `reviews` (
 
 -- Daten Export vom Benutzer nicht ausgewählt
 
--- Exportiere Struktur von Tabelle bug-free-waffle.servers
+-- Exportiere Struktur von Tabelle bug-free-waffle-dev.servers
 CREATE TABLE IF NOT EXISTS `servers` (
   `servername` varchar(45) DEFAULT NULL,
   `serverurl` varchar(45) DEFAULT NULL,
@@ -37,12 +37,13 @@ CREATE TABLE IF NOT EXISTS `servers` (
   `registered_by` varchar(45) DEFAULT NULL,
   `votes` int(11) DEFAULT NULL,
   `serverid` int(11) NOT NULL AUTO_INCREMENT,
+  `servericon` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`serverid`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
 -- Daten Export vom Benutzer nicht ausgewählt
 
--- Exportiere Struktur von Tabelle bug-free-waffle.user_votes
+-- Exportiere Struktur von Tabelle bug-free-waffle-dev.user_votes
 CREATE TABLE IF NOT EXISTS `user_votes` (
   `dcuserid` varchar(50) DEFAULT '',
   `voted` varchar(50) DEFAULT NULL,

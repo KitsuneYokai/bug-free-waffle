@@ -22,6 +22,8 @@ You can take a look at it by visiting https://osulist.kitsu.cf or https://osulis
 
 - [ ] Add server category pills (e.g Vanilla, Relax, Autopilot, Autoplay?, cheating, non-cheating ... (you know what i mean (i hope (i realy do ))))
 
+- [✔️] List the bot commands dynamically on the index site
+
 - [✔️] Add changable servericon
 
 - [✔️] Add discord bot vote functionality
@@ -56,8 +58,6 @@ You can take a look at it by visiting https://osulist.kitsu.cf or https://osulis
 
 - [✔️] Add favicon & votes from the server to the server cards
 
-- [✔️] Add hCaptcha
-
 - [✔️] Login
 
 ## Ideas
@@ -67,6 +67,11 @@ You can take a look at it by visiting https://osulist.kitsu.cf or https://osulis
 - add discord bot to vote through the discord server
 
 - Maybe add a user page?
+
+## Installation
+
+i will write this someday bit for now i will use this just for notes
+pip install -U git+https://github.com/nextcord/nextcord-ext-ipc
 
 ## Endnote
 
