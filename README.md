@@ -71,7 +71,7 @@ You can take a look at it by visiting https://osulist.kitsu.cf or https://osulis
 ## Installation
 
 i will write this someday bit for now i will use this just for notes
-pip install -U git+https://github.com/nextcord/nextcord-ext-ipc
+pip3 install -U git+https://github.com/nextcord/nextcord-ext-ipc
 
 ## Endnote
 

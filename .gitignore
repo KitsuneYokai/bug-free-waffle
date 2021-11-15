@@ -1,5 +1,11 @@
 .env
 .vscode
+/modules/osumapper/node_modules/
+
 __pycache__/
 /Blueprints/__pycache__/
 /API/__pycache__/
+/modules/osumapper/__pycache__/
+/modules/osumapper/.ipynb_checkpoints/
+/modules/osumapper/include/__pycache__/
+/modules/osumapper/mapdata/
