@@ -6,7 +6,7 @@ It is currently in development (and also lacking a name).
 
 You can check the TODO´s list to check what's working and what isn't.
 
-You can take a look at it by visiting https://osulist.kitsu.cf or https://osulistdev.kitsu.cf when im working on it
+I wont work on this version anymore. Instead i will start the project all over again in flutter :) i hope u know why ^_^.
 
 ## TODO's
 
